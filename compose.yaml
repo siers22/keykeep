@@ -1,0 +1,49 @@
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    environment:
+      APP_MODE: production
+      DATABASE_URL: postgresql+psycopg://keykeep:${POSTGRES_PASSWORD:-keykeep}@postgres:5432/keykeep
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET in .env}
+      REFRESH_COOKIE_SECURE: ${REFRESH_COOKIE_SECURE:-false}
+    command: sh -c 'alembic upgrade head && exec uvicorn keykeep.main:app --app-dir src --host 0.0.0.0 --port 8000 --no-access-log'
+    ports:
+      - "127.0.0.1:${APP_PORT:-8000}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+  postgres:
+    image: docker.io/library/postgres:18-alpine
+    environment:
+      POSTGRES_DB: keykeep
+      POSTGRES_USER: keykeep
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-keykeep}
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U keykeep -d keykeep']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  redis:
+    image: docker.io/library/redis:8-alpine
+    command: [redis-server, --appendonly, 'yes']
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+volumes:
+  postgres_data:
+  redis_data:

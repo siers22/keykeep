@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111512">
+  <meta name="description" content="Защити крепость силой печати. Рогалик с башнями, рунами и слепой печатью.">
+  <title>Keykeep — Рунный рубеж</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="i-keep" viewBox="0 0 24 24"><path d="M4 3v7l3 3v8h10v-8l3-3V3h-4v4h-2V3h-4v4H8V3Z"/><path d="M10 21v-5h4v5"/></symbol>
+    <symbol id="i-sword" viewBox="0 0 24 24"><path d="m5 19 3-3m-4-3 7 7m-2-5L20 4l-1 7L9 18M3 21l3-3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 4v16h17M8 15l4-5 4 2 5-7"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 3h8v6a4 4 0 0 1-8 0ZM8 5H4v3a4 4 0 0 0 4 4m8-7h4v3a4 4 0 0 1-4 4m-4 1v6m-4 2h8"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 21 3.5 12a5.5 5.5 0 0 1 8.5-7 5.5 5.5 0 0 1 8.5 7Z"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7Z"/><path d="m12 7 4 5-4 5-4-5Z"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24"><path d="m3 17 5-10 4 7 4-11 5 14M3 21h18"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9h4l5-5v16l-5-5H4Zm13-1a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 1 1 5 2c-2 1-2 2-2 3m0 3v.2"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+    <symbol id="i-frost" viewBox="0 0 24 24"><path d="M12 2v20M3 7l18 10M3 17 21 7M9 4l3 3 3-3M9 20l3-3 3 3M3 10l4-1-1-4m12 14-1-4 4-1M3 14l4 1-1 4M18 5l-1 4 4 1"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M13 2c2 6-2 7-1 11 2-1 3-3 3-5 7 7 6 14-3 14S1 15 7 9c-1 5 0 5 1 6-1-7 3-8 5-13Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-echo" viewBox="0 0 24 24"><path d="m12 2 5 10-5 10-5-10Zm-8 4L1 12l3 6M20 6l3 6-3 6"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 3"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 5v16M12 5C8 2 4 3 2 4v15c4-2 7-1 10 2 3-3 6-4 10-2V4c-4-2-7-1-10 1Z"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 1 7M3 3v7h7"/></symbol>
+  </defs></svg>
+
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Keykeep — главная"><span class="brand-mark"><svg><use href="#i-keep"/></svg></span>keykeep<span class="brand-dot">.</span></a>
+    <span class="prototype-label">ROGUELIKE × TYPING</span>
+    <nav class="navigation" aria-label="Разделы">
+      <button class="nav-item active" data-view="game"><svg><use href="#i-sword"/></svg><span>Кампания</span></button>
+      <button class="nav-item" data-view="stats"><svg><use href="#i-chart"/></svg><span>Мой прогресс</span></button>
+      <button class="nav-item" data-view="leaderboard"><svg><use href="#i-trophy"/></svg><span>Рейтинг</span></button>
+    </nav>
+    <button id="account-button" class="account-button"><span class="avatar"><svg><use href="#i-user"/></svg></span><span><strong id="player-name">Странник</strong><small id="player-level">Уровень 1</small></span><span class="account-chevron">⌄</span></button>
+  </header>
+
+  <main>
+    <section id="game-view" class="view">
+      <div class="page-heading">
+        <div><div class="eyebrow"><span class="status-dot"></span> ГЛАВА I · ШЕПЧУЩИЙ ЛЕС</div><h1>Рунный рубеж<span class="title-rune">✧</span></h1><p>Слова — твоё оружие. Крепость — твоя ответственность.</p></div>
+        <div class="heading-actions"><button class="subtle-button" id="help-button"><svg><use href="#i-help"/></svg>Как играть</button><span class="version-badge">ПРОТОТИП 0.2</span></div>
+      </div>
+
+      <div class="game-layout">
+        <aside class="build-panel panel">
+          <div class="panel-heading"><span class="eyebrow">ТВОЯ ОБОРОНА</span><svg><use href="#i-keep"/></svg></div>
+          <h2>Каждая башня<br>имеет значение.</h2>
+          <p class="muted small" id="build-instruction">Выбери башню, затем свободную площадку на карте.</p>
+          <div class="tower-list" id="tower-list"></div>
+          <div class="selected-pad" id="selected-pad" hidden></div>
+          <div class="build-note"><span class="status-dot"></span><span id="build-note">Строительство доступно между волнами</span></div>
+          <div class="sidebar-divider"></div>
+          <div class="eyebrow">ПАРАМЕТРЫ ЗАБЕГА</div>
+          <label class="field-label" for="mode-select">Тренировка</label>
+          <select id="mode-select"><option value="words">Слова</option><option value="sentences">Предложения</option><option value="code">Код</option><option value="symbols">Символы</option></select>
+          <div class="settings-row"><div><label class="field-label" for="language-select">Язык</label><select id="language-select"><option value="ru">Русский</option><option value="en">English</option></select></div><div><label class="field-label" for="difficulty-select">Сложность</label><select id="difficulty-select"><option value="calm">Спокойно</option><option value="normal" selected>Обычно</option><option value="hard">Сложно</option></select></div></div>
+          <p class="muted tiny settings-note" id="settings-note">Параметры фиксируются с первой волны.</p>
+        </aside>
+
+        <div class="battle-column">
+          <section class="battlefield panel" aria-label="Поле боя">
+            <div class="battle-hud">
+              <div class="wave-info"><span class="hud-icon"><svg><use href="#i-wave"/></svg></span><div><span class="eyebrow">ТЕКУЩАЯ ВОЛНА</span><strong><span id="wave-number">01</span><span class="hud-total"> / 08</span></strong></div></div>
+              <div class="hud-resources"><div class="health-resource"><svg><use href="#i-heart"/></svg><span id="hp-value">100</span><span class="hud-total" id="hp-max">/ 100</span><span class="mini-health"><i id="health-bar"></i></span></div><span class="hud-divider"></span><div class="gold-resource"><svg><use href="#i-coin"/></svg><span id="gold-value">100</span></div></div>
+              <div class="battle-controls"><button class="icon-button" id="sound-button" aria-label="Включить звук" aria-pressed="false"><svg><use href="#i-sound"/></svg></button><button class="icon-button" id="pause-button" aria-label="Пауза" disabled><svg><use href="#i-pause"/></svg></button></div>
+            </div>
+            <div class="canvas-wrap" id="canvas-wrap"><canvas id="battle-canvas" width="1100" height="570" tabindex="0" aria-label="Карта обороны. Семь площадок для башен. Во время волны печатай слова над врагами."></canvas>
+              <div class="map-location"><span class="location-line"></span> ДРЕВНИЙ ТРАКТ <span class="map-coordinates">54° N / 28° E</span></div>
+              <div class="map-start-label" id="map-start-label"><span class="status-dot"></span> ОБОРОНА ГОТОВА К БОЮ</div>
+              <div class="pause-overlay" id="pause-overlay" hidden><span class="eyebrow">ПЕРЕДЫШКА</span><h2>Время замерло.</h2><p>Крепость подождёт. Возвращайся, когда будешь готов.</p><button class="primary-button" id="resume-button"><svg><use href="#i-play"/></svg>Продолжить</button><button class="text-button danger" id="abandon-button">Завершить забег</button></div>
+            </div>
+            <div class="battle-bottom"><span id="wave-description"><span class="status-dot"></span> Тихо. Но ненадолго.</span><button id="start-wave" class="primary-button" disabled>Подключение…<svg><use href="#i-arrow"/></svg></button></div>
+          </section>
+
+          <section class="typing-panel panel" id="typing-panel" aria-label="Печать и клавиатурные подсказки">
+            <div class="typing-topline"><span class="eyebrow" id="typing-label">ТВОЁ СЛЕДУЮЩЕЕ ЗАКЛИНАНИЕ</span><span class="typing-tip" id="typing-tip">Начни с первой буквы слова над врагом</span></div>
+            <div class="typing-word" id="typing-word">Сила в каждом нажатии<span class="idle-cursor"></span></div>
+            <div id="ward-status" class="ward-status">◇ Каждое завершённое слово разбивает один слой щита.</div><div class="typing-bottomline"><span id="finger-hint" class="finger-hint"><span class="key-hint">↵</span> Начни волну, чтобы пробудить руны</span><span class="target-hint"><kbd>Tab</kbd> сменить цель</span></div>
+            <input id="mobile-input" class="mobile-input" aria-label="Поле ввода заклинаний" autocomplete="off" autocapitalize="off" spellcheck="false" inputmode="text">
+            <button id="mobile-keyboard" class="text-button mobile-only">Открыть клавиатуру</button>
+          </section>
+          <div class="keyboard" id="keyboard" aria-label="Клавиатура с подсказками по пальцам"></div>
+          <div class="finger-legend"><span><i style="--finger:#bd969a"></i>Мизинец</span><span><i style="--finger:#d7b988"></i>Безымянный</span><span><i style="--finger:#92bca4"></i>Средний</span><span><i style="--finger:#91adc2"></i>Указательный</span><span class="keyboard-advice">Держи пальцы на <b id="home-keys">Ф Ы В А · О Л Д Ж</b></span></div>
+        </div>
+
+        <aside class="run-panel">
+          <section class="panel journey-panel"><div class="panel-heading"><span class="eyebrow">ПУТЬ ХРАНИТЕЛЯ</span><span class="tiny muted">8 ВОЛН</span></div><div id="wave-track" class="wave-track"></div><div class="journey-caption"><strong id="journey-title">Первый дозор</strong><p id="journey-copy">Укрепи рубеж. Первая башня уже на твоей стороне.</p></div><div class="boss-preview"><span class="boss-symbol">♜</span><div><strong>Древний страж</strong><small>Босс · волна 8</small></div><span class="boss-lock">VIII</span></div></section>
+          <section class="panel relic-panel"><div class="panel-heading"><span class="eyebrow">РЕЛИКВИИ</span><span id="relic-count" class="tiny muted">0 / 7</span></div><div id="relic-list" class="relic-list"><div class="empty-relic">✧</div><p class="muted small">Твоя история ещё не написана.<br>Пройди волну и выбери усиление.</p></div></section>
+          <section class="panel live-stats"><div class="panel-heading"><span class="eyebrow">РИТМ ПЕЧАТИ</span><span class="live-indicator"><i></i>LIVE</span></div><div class="speed-stat"><strong id="live-cpm">0</strong><span>симв / мин</span></div><div class="wpm-caption" id="live-wpm">0 слов / мин</div><div class="stat-row"><span>Точность</span><strong id="live-accuracy">100<span>%</span></strong></div><div class="stat-row"><span>Повержено</span><strong id="live-kills">0</strong></div><div class="combo-card" id="combo-card"><span class="combo-rune">ϟ</span><div><strong id="combo-multiplier">×1</strong><span id="combo-count">0 без ошибок</span></div><div class="combo-bars"><i></i><i></i><i></i><i></i><i></i></div></div><div class="combo-caption" id="combo-caption">10 нажатий до множителя ×2</div></section>
+          <div class="run-time"><svg><use href="#i-clock"/></svg><span id="run-timer">00:00</span><span>в бою</span></div>
+        </aside>
+      </div>
+      <footer class="game-footer"><span><i class="status-dot"></i> <span id="connection-status">Пробуждаем руны…</span></span><div><span><kbd>Enter</kbd> новая волна</span><span><kbd>Esc</kbd> пауза</span><span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> выбор башни</span></div><span>ПЕЧАТАЙ. СТРОЙ. ВЫЖИВАЙ.</span></footer>
+    </section>
+
+    <section id="stats-view" class="view content-view" hidden><div class="page-heading"><div><div class="eyebrow">КАЖДОЕ НАЖАТИЕ ИМЕЕТ ЗНАЧЕНИЕ</div><h1>Твой прогресс</h1><p>Забеги заканчиваются. Мастерство остаётся.</p></div><button class="subtle-button" data-view="game">Вернуться в лес<svg><use href="#i-arrow"/></svg></button></div><div id="stats-content" class="stats-content"></div></section>
+    <section id="leaderboard-view" class="view content-view" hidden><div class="page-heading"><div><div class="eyebrow">ЗАЛ ХРАНИТЕЛЕЙ</div><h1>Лучшие на рубеже</h1><p>Результаты зарегистрированных игроков от 50 символов и 10 секунд.</p></div></div><div class="panel leaderboard-panel"><div class="leaderboard-filters"><select id="ranking-metric" aria-label="Метрика рейтинга"><option value="cpm">Скорость · симв/мин</option><option value="accuracy">Точность · %</option><option value="xp">Опыт · XP</option></select><select id="ranking-period" aria-label="Период рейтинга"><option value="all">За всё время</option><option value="week">За 7 дней</option><option value="today">Сегодня · UTC</option></select><select id="ranking-mode" aria-label="Режим рейтинга"><option value="words">Слова</option><option value="sentences">Предложения</option><option value="code">Код</option><option value="symbols">Символы</option></select><select id="ranking-language" aria-label="Язык рейтинга"><option value="ru">Русский</option><option value="en">English</option></select><select id="ranking-difficulty" aria-label="Сложность рейтинга"><option value="normal">Обычно</option><option value="calm">Спокойно</option><option value="hard">Сложно</option></select></div><div id="leaderboard-content"></div><p class="muted tiny leaderboard-note">Рейтинг прототипа. Итоги рассчитывает сервер; полноценная защита от подмены игрового клиента пока не реализована.</p></div></section>
+  </main>
+
+  <dialog id="help-dialog" class="modal"><button class="modal-close icon-button" data-close aria-label="Закрыть"><svg><use href="#i-close"/></svg></button><span class="eyebrow">ДОБРО ПОЖАЛОВАТЬ НА РУБЕЖ</span><h2>Твоя клавиатура —<br>твоя магия.</h2><p class="muted">Восемь волн. Одна крепость. И слова, которые меняют всё.</p><ol class="help-steps"><li><span>01</span><div><strong>Построй оборону</strong><p>Выбери башню слева и нажми на площадку с плюсом. Страж уже построен бесплатно. Управлять площадками можно и кнопками под картой.</p></div></li><li><span>02</span><div><strong>Печатай слова над врагами</strong><p>Первая правильная буква выбирает цель. Целое слово разбивает слой рунического щита и наносит мощный удар. Башни не могут добить защищённого врага. У бронированных врагов два слоя щита, у босса три.</p></div></li><li><span>03</span><div><strong>Собери свою комбинацию</strong><p>После волны выбери одну из трёх реликвий. Строй и улучшай башни. На восьмой волне тебя ждёт босс.</p></div></li></ol><div class="help-shortcuts"><span><kbd>Tab</kbd> сменить цель</span><span><kbd>⌫</kbd> отпустить цель</span><span><kbd>Esc</kbd> пауза</span></div><button class="primary-button wide" data-close>Принять дозор<svg><use href="#i-arrow"/></svg></button></dialog>
+
+  <dialog id="reward-dialog" class="modal reward-modal" aria-labelledby="reward-title"><span class="eyebrow" id="reward-eyebrow">ВОЛНА ПРОЙДЕНА</span><h2 id="reward-title">Сила меняет форму.</h2><p class="muted">Выбери одну реликвию. Она останется с тобой до конца забега.</p><div id="reward-options" class="reward-options"></div><div class="reward-footnote">✧ Сочетай эффекты. Найди свой путь.</div></dialog>
+
+  <dialog id="result-dialog" class="modal result-modal"><span class="result-emblem" id="result-emblem"><svg><use href="#i-keep"/></svg></span><span class="eyebrow" id="result-eyebrow">ДОЗОР ОКОНЧЕН</span><h2 id="result-title">Каждый рубеж — опыт.</h2><p class="muted" id="result-copy"></p><div class="result-grid" id="result-grid"></div><div id="result-save" class="save-status" aria-live="polite"></div><div class="result-actions"><button class="primary-button" id="new-run-button">Новый забег<svg><use href="#i-reset"/></svg></button><button class="subtle-button" id="result-stats-button">Мой прогресс</button><button class="subtle-button" id="retry-save-button" hidden>Повторить сохранение</button></div></dialog>
+
+  <dialog id="account-dialog" class="modal account-modal"><button class="modal-close icon-button" data-close aria-label="Закрыть"><svg><use href="#i-close"/></svg></button><span class="eyebrow">ТВОЙ ПУТЬ СОХРАНИТСЯ</span><h2 id="account-title">Стань хранителем.</h2><p class="muted" id="account-copy">Создай аккаунт, чтобы продолжить с другого устройства. Гостевой прогресс останется с тобой.</p><div class="auth-tabs" id="auth-tabs"><button class="active" data-auth-tab="register">Регистрация</button><button data-auth-tab="login">Вход</button></div><form id="auth-form"><label id="name-label">Имя<input name="first_name" placeholder="Как тебя зовут?" maxlength="100" autocomplete="nickname"></label><label>Почта<input name="email" type="email" placeholder="you@example.com" autocomplete="email" required maxlength="320"></label><label>Пароль<input name="password" type="password" placeholder="Не меньше 8 символов" minlength="8" maxlength="128" autocomplete="new-password" required></label><p id="auth-error" class="form-error" role="alert"></p><button class="primary-button wide" type="submit" id="auth-submit">Создать аккаунт<svg><use href="#i-arrow"/></svg></button></form><div id="signed-account" hidden><label class="field-label" for="profile-name">Имя хранителя</label><input id="profile-name" maxlength="100"><button class="primary-button wide" id="save-profile">Сохранить имя</button><button class="text-button danger wide" id="logout-button">Выйти из аккаунта</button></div><p class="tiny muted" id="account-note">В локальном режиме гостевой вход действует до перезапуска сервера. Аккаунт с паролем можно восстановить всегда.</p></dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/assets/app.js"></script>
+</body>
+</html>
